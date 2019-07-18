@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from pendientes import views
+     #Creamos la ruta raiz '' y la enlazamos con nuestra vista index del archivo views.py
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'), #Creamos la ruta raiz '' y la enlazamos con nuestra vista index del archivo views.py
+    path("admin/" , admin.site.urls), 
+    path("",views.index, name="index"),
+    path("tarea", views.tarea),
 ]
